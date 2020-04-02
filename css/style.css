@@ -9,6 +9,11 @@
   border: 0px solid black;
 }
 
+.left,
+.right {
+  display: inline-block;
+}
+
 .left {
   text-align: left;
   width: 70%;
@@ -17,7 +22,18 @@
   text-align: right;
   width: 30%;
 }
-.left,
-.right {
-  display: inline-block;
+
+@media (max-width: 585px) {
+  .left,
+  .right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    justify-content: space-around;
+  }
+  .right {
+    justify-content: center;
+  }
 }
