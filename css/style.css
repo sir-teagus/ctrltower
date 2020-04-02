@@ -9,6 +9,15 @@
   border: 0px solid black;
 }
 
+.left {
+  text-align: left;
+  width: 70%;
+}
 .right {
-  text-align: end;
+  text-align: right;
+  width: 30%;
+}
+.left,
+.right {
+  display: inline-block;
 }
