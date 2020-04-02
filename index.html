@@ -34,19 +34,21 @@
       <div class="row spacer">
         <div class="col m9 s9">
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+          <a
+            class="waves-effect waves-light btn-small modal-trigger"
+            href="#modal1"
             >Add to the fight!</a
           >
           <a
             id="btn-reset"
-            class="waves-effect waves-light btn red"
+            class="waves-effect waves-light btn-small red"
             onclick="Store.reset()"
             >Reset battle</a
           >
         </div>
         <div class="col m3 s3 right">
-          <a id="btn-backward" class="waves-effect waves-light btn"><</a>
-          <a id="btn-forward" class="waves-effect waves-light btn">></a>
+          <a id="btn-backward" class="waves-effect waves-light btn-small"><</a>
+          <a id="btn-forward" class="waves-effect waves-light btn-small">></a>
         </div>
       </div>
 
@@ -88,18 +90,11 @@
                   Submit<i class="material-icons right">send</i>
                 </button>
                 <button
-                  class="btn waves-effect waves-light cyan"
-                  type="reset"
-                  name="reset"
-                >
-                  Reset
-                </button>
-                <button
                   type="reset"
                   class="btn waves-effect waves-light red modal-close"
                   name="cancel"
                 >
-                  Close
+                  Cancel
                 </button>
               </div>
             </form>
