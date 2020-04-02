@@ -31,9 +31,13 @@
   }
 
   .left {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .right {
-    justify-content: center;
+    justify-content: flex-end;
+  }
+
+  .btn-small {
+    margin-left: 5px !important;
   }
 }
