@@ -127,7 +127,11 @@
     <!--Modal initializadtion-->
     <script>
       $(document).ready(function() {
-        $(".modal").modal();
+        $(".modal").modal({
+          onCloseEnd: function() {
+            UI.refresh();
+          } // Callback for Modal close
+        });
       });
     </script>
 

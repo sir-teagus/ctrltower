@@ -89,6 +89,10 @@ class UI {
       return b.initiative - a.initiative;
     });
   }
+
+  static refresh() {
+    location.reload();
+  }
 }
 
 //Event listener for displaying players on page load
@@ -135,6 +139,8 @@ document.querySelector("#player-list").addEventListener("click", e => {
   );
 });
 
+// Event listener for complete RESET of the battle
 document.querySelector("#btn-reset").addEventListener("click", e => {
   Store.reset();
+  UI.refresh();
 });
