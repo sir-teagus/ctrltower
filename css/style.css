@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.spacer {
+  margin-top: 30px;
+  border: 0px solid black;
+}
+
+.right {
+  text-align: end;
+}

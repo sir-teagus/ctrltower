@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Initiative CtrlTower</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+
+    <!-- Google Fonts for Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d0a0df0128.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="center">
+        <span class="cyan-text lighten-2"><i class="fas fa-dice-d20"></i></span>
+        Battle CtrlTower
+      </h1>
+
+      <div class="row spacer">
+        <div class="col m9 s9">
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+            >Add to the fight!</a
+          >
+          <a
+            id="btn-reset"
+            class="waves-effect waves-light btn red"
+            onclick="Store.reset()"
+            >Reset battle</a
+          >
+        </div>
+        <div class="col m3 s3 right">
+          <a id="btn-backward" class="waves-effect waves-light btn"><</a>
+          <a id="btn-forward" class="waves-effect waves-light btn">></a>
+        </div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h6>Add players, monsters and NPC's:</h6>
+          <!-- Add New Player Form Structure -->
+          <div class="row">
+            <form id="newPlayerForm" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="player_name" type="text" class="validate" />
+                  <label for="player_name">Player Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="char_name" type="text" class="validate" />
+                  <label for="char_name">Characther Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="rolled_initiative"
+                    type="number"
+                    class="validate"
+                  />
+                  <label for="rolled_initiative">Rolled Initiative</label>
+                </div>
+              </div>
+              <div class="row center">
+                <button
+                  class="btn waves-effect waves-light"
+                  type="submit"
+                  name="action"
+                >
+                  Submit<i class="material-icons right">send</i>
+                </button>
+                <button
+                  class="btn waves-effect waves-light cyan"
+                  type="reset"
+                  name="reset"
+                >
+                  Reset
+                </button>
+                <button
+                  type="reset"
+                  class="btn waves-effect waves-light red modal-close"
+                  name="cancel"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- CtrlTower Table Structure -->
+      <div id="ctrlTower">
+        <table class="highlight centered">
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Characther Name</th>
+              <th>Rolled Initiative</th>
+              <th>Turn #</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="player-list"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--JQuery CDN import-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Modal initializadtion-->
+    <script>
+      $(document).ready(function() {
+        $(".modal").modal();
+      });
+    </script>
+
+    <!--Materialize JS import-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
